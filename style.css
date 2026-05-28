@@ -1,0 +1,649 @@
+/* ================================================
+   STYLES.CSS — Portafolio Axel Cadena (Dark Mode)
+   Paleta de colores:
+     #0B0B0E  → Fondo principal (Negro profundo)
+     #15151A  → Fondo secundario (Gris oscuro)
+     #22222B  → Tarjetas e inputs
+     #E85D04  → Color de acento (Naranja cinemático)
+     #F0F0F0  → Texto principal
+     #A0A0A8  → Texto secundario
+================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #F0F0F0;
+  background-color: #0B0B0E;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.about-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #E85D04;
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background-color: #E85D04;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid #E85D04;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(232, 93, 4, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #E85D04;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 93, 4, 0.4);
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ================================================
+   HEADER
+================================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(11, 11, 14, 0.85);
+  backdrop-filter: blur(10px); /* Efecto cristal moderno */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo-placeholder {
+  width: 45px;
+  height: 45px;
+  background-color: #E85D04;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(232, 93, 4, 0.4);
+}
+
+.logo-text {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #A0A0A8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+  border-bottom-color: #E85D04;
+}
+
+/* ================================================
+   HERO
+================================================ */
+.hero-section {
+  background-color: #0B0B0E;
+  padding: 160px 3rem 90px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: radial-gradient(circle at top right, rgba(232, 93, 4, 0.08) 0%, transparent 40%);
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 580px;
+}
+
+.hero-greeting {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #E85D04;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+}
+
+.hero-name {
+  color: #E85D04;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #A0A0A8;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #A0A0A8;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 340px;
+  height: 340px;
+}
+
+.profile-img {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #22222B;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.photo-ring {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  border: 2px dashed #E85D04;
+  animation: spin 20s linear infinite;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ================================================
+   SOBRE MÍ
+================================================ */
+.about-section {
+  background-color: #15151A;
+  padding: 100px 3rem;
+  border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: #A0A0A8;
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+
+/* ================================================
+   PROYECTOS
+================================================ */
+.projects-section {
+  background-color: #0B0B0E;
+  padding: 100px 3rem;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #1A1A22;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(232, 93, 4, 0.15);
+  border-color: rgba(232, 93, 4, 0.3);
+}
+
+.project-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.8);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.project-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #E85D04;
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.project-body {
+  padding: 1.8rem;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.6rem;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #A0A0A8;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.project-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #E85D04;
+  letter-spacing: 0.05em;
+  transition: letter-spacing 0.2s ease;
+}
+
+.project-link:hover {
+  letter-spacing: 0.15em;
+}
+
+/* ================================================
+   HABILIDADES
+================================================ */
+.skills-section {
+  background-color: #15151A;
+  padding: 100px 3rem;
+  border-top: 1px solid rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+.skills-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: #1A1A22;
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.03);
+  border-bottom: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-bottom-color: #E85D04;
+  transform: translateY(-5px);
+  background-color: #22222B;
+}
+
+.skill-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skill-desc {
+  font-size: 0.85rem;
+  color: #A0A0A8;
+  line-height: 1.6;
+}
+
+/* ================================================
+   CONTACTO
+================================================ */
+.contact-section {
+  background-color: #0B0B0E;
+  padding: 100px 3rem;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-cta {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.contact-divider {
+  margin-bottom: 2rem;
+}
+
+.contact-text {
+  font-size: 1rem;
+  color: #A0A0A8;
+  margin-bottom: 1.2rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  background-color: #15151A;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #E85D04;
+}
+
+.contact-info-item {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  min-width: 320px;
+  background-color: #15151A;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid #333340;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  background-color: #0B0B0E;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #E85D04;
+  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.15);
+}
+
+.form-input::placeholder {
+  color: #555566;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ================================================
+   FOOTER
+================================================ */
+.site-footer {
+  background-color: #050508;
+  padding: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #A0A0A8;
+  letter-spacing: 0.05em;
+}
+
+.social-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border: 1px solid #333340;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #E85D04;
+  border-color: #E85D04;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(232, 93, 4, 0.3);
+}
+
+/* ================================================
+   RESPONSIVE
+================================================ */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-description {
+    margin: 0 auto 2.5rem;
+  }
+
+  .photo-wrapper, .profile-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .photo-ring {
+    width: 310px;
+    height: 310px;
+    top: -15px;
+    left: -15px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .site-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-section, .about-section, .projects-section, .skills-section, .contact-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .projects-grid, .skills-grid {
+    flex-direction: column;
+  }
+
+  .project-card, .skill-card, .contact-form-wrapper {
+    min-width: 100%;
+  }
+  
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
